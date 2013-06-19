@@ -13,11 +13,10 @@ void setup() {
 // the loop() method runs over and over again.
 // as long as the Arduino has power
 void loop() {
-  digitalWrite(ledPin, 255);
+  digitalWrite(ledPin, HIGH);
   delay(1000);
-  digitalWrite(ledPin, 5);
+  digitalWrite(ledPin, LOW);
   delay(1000);
-  analogWrite(ledPin, 5);
 }
 
 
