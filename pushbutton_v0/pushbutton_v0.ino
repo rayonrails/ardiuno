@@ -5,11 +5,12 @@
   */
 
   //LED Pin Variables
+  int buttonPin = 11;
   int ledPins[] = {2,3,4,5,6,7,8,9}; //An array to hold the pin each LED is connected to
                                  //i.e. Led #0 is connected to pin 2, LED #1, 3 and so on
                                  //to address an array use ledPins[0] this would equal 2
                                  //and ledPins[7] would equal 9
-
+  int buttonState = 0;
   /*
   * setup() - this function runs once when you turn your Arduino on
   * We the three control pinis to outputs
@@ -31,8 +32,15 @@
   */
   void loop()
   {
+    buttonState = digitalRead(buttonPin);
+    if (buttonState == HIGH){
+      oneAfterAnotherNoLoop();
+    }
+    else {
+      inAndOut();
+    }
     //oneAfterAnotherNoLoop();
-    inAndOut();
+    //inAndOut();
     //oneOnAtTime();
   }
   void oneAfterAnotherNoLoop(){
