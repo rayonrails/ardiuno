@@ -26,7 +26,8 @@ void loop()
   //print the result
   //waiting a second
   temperature = (((temperature - .5) * 100)*1.8) + 32;
-  Serial.println(temperature);
+  Serial.print(temperature);
+  Serial.println(" degrees F");
   delay(1000);
 }
 
