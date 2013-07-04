@@ -2,7 +2,7 @@
  * Temperature displayed on LCD
 */
 
-const int lcdPin = 6;
+const int lcdPin = 8;
 const int temperaturePin = 0;
 
 #include <SoftwareSerial.h>

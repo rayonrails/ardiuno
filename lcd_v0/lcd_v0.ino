@@ -1,4 +1,4 @@
-const int TxPin = 6;
+const int TxPin = 8;
 
 #include <SoftwareSerial.h>
 SoftwareSerial mySerial = SoftwareSerial(255, TxPin);
@@ -19,7 +19,7 @@ void setup() {
   mySerial.write(219);                // Quarter note
   mySerial.write(220);                // A tone
   delay(3000);                        // Wait 3 seconds
-  mySerial.write(18);                 // Turn backlight off
+  //mySerial.write(18);                 // Turn backlight off
 
 }
 
